@@ -11,11 +11,11 @@ public class SecondActivity extends Activity {
     @Override
     protected void onCreate(Bundle saveInstanceState) {
         super.onCreate(saveInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_second);
 
-        ConstraintLayout constraintLayout = findViewById(R.id.back);
+        ConstraintLayout constraintLayout = findViewById(R.id.second);
         Intent intent=getIntent();
-        String inputColor=intent.getStringExtra("InputColor");
+        String inputColor=intent.getStringExtra("InputColor").toLowerCase();
         switch (inputColor){
             case "black":
                 constraintLayout.setBackgroundColor(getResources().getColor(R.color.black));
